@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [{
+        "name": "(Windows) Launch",
+        "type": "cppvsdbg",
+        "request": "launch",
+        "program": "${workspaceRoot}/a.exe",
+        //"args": ["<", "${workspaceRoot}/.vscode/data_in.txt"],
+        "args": ["<", "${workspaceRoot}/.vscode/data_in.txt", ">", "${workspaceRoot}/.vscode/data_out.txt"],
+        "stopAtEntry": false,
+        "cwd": "${workspaceRoot}",
+        "environment": [],
+        "externalConsole": true,
+        "preLaunchTask": "build"
+    }]
+}

@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "xiosbase": "c",
+        "xlocale": "c",
+        "algorithm": "c"
+    }
+}
