@@ -5,12 +5,26 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "taskName": "build",
+            "label": "build",
             "type": "shell",
-            "command": "${workspaceRoot}/.vscode/build.bat",
-            "args": ["${file}"],
             "presentation": {
                 "reveal": "never"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "linux": {
+                "command": "g++",
+                "args": [
+                    "-g", "${file}"
+                ]
+            },
+            "windows": {
+                "command": "${workspaceRoot}/.vscode/build.bat",
+                "args": [
+                    "${file}"
+                ]
             }
         }
     ]
