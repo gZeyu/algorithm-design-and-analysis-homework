@@ -2,7 +2,8 @@
     "files.associations": {
         "xiosbase": "c",
         "xlocale": "c",
-        "algorithm": "c"
+        "algorithm": "c",
+        "stdio.h": "c"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }

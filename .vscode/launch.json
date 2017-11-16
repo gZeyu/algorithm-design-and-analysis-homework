@@ -5,13 +5,25 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "(Windows) Launch",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/a.exe",
+            "args": ["<", "${workspaceFolder}/.vscode/data_in.txt", ">", "${workspaceFolder}/.vscode/data_out.txt"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "preLaunchTask": "build"
+        },
+        {
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceRoot}/a.out",
-            "args": ["<", "${workspaceRoot}/.vscode/data_in.txt", ">", "${workspaceRoot}/.vscode/data_out.txt"],
+            "program": "${workspaceFolder}/a.out",
+            "args": ["<", "${workspaceFolder}/.vscode/data_in.txt", ">", "${workspaceFolder}/.vscode/data_out.txt"],
             "stopAtEntry": false,
-            "cwd": "${workspaceRoot}",
+            "cwd": "${workspaceFolder}",
             "environment": [],
             "externalConsole": false,
             "setupCommands": [
@@ -25,7 +37,6 @@
             "linux": {
                 "MIMode": "gdb"
             }
-            
         }
     ]
 }
