@@ -9,11 +9,12 @@
             "type": "cppvsdbg",
             "request": "launch",
             "program": "${workspaceFolder}/a.exe",
+            // "args": [],
             "args": ["<", "${workspaceFolder}/.vscode/data_in.txt", ">", "${workspaceFolder}/.vscode/data_out.txt"],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
-            "externalConsole": false,
+            "externalConsole": true,
             "preLaunchTask": "build"
         },
         {
