@@ -1,6 +1,1 @@
-line 0, station 6
-line 1, station 5
-line 1, station 4
-line 0, station 3
-line 1, station 2
-line 0, station 1
+((A1(A2A3))((A4A5)A6))

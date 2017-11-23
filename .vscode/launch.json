@@ -10,11 +10,16 @@
             "request": "launch",
             "program": "${workspaceFolder}/a.exe",
             // "args": [],
-            "args": ["<", "${workspaceFolder}/.vscode/data_in.txt", ">", "${workspaceFolder}/.vscode/data_out.txt"],
+            "args": [
+                "<",
+                "${workspaceFolder}/.vscode/data_in.txt",
+                ">",
+                "${workspaceFolder}/.vscode/data_out.txt"
+            ],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
-            "externalConsole": true,
+            "externalConsole": false,
             "preLaunchTask": "build"
         },
         {
@@ -22,7 +27,12 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/a.out",
-            "args": ["<", "${workspaceFolder}/.vscode/data_in.txt", ">", "${workspaceFolder}/.vscode/data_out.txt"],
+            "args": [
+                "<",
+                "${workspaceFolder}/.vscode/data_in.txt",
+                ">",
+                "${workspaceFolder}/.vscode/data_out.txt"
+            ],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
