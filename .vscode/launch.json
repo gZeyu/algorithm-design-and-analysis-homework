@@ -9,12 +9,11 @@
             "type": "cppvsdbg",
             "request": "launch",
             "program": "${workspaceFolder}/a.exe",
-            // "args": [],
             "args": [
                 "<",
-                "${workspaceFolder}/.vscode/data_in.txt",
+                "${fileDirname}/data_in.txt",
                 ">",
-                "${workspaceFolder}/.vscode/data_out.txt"
+                "${fileDirname}/data_out.txt"
             ],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
@@ -29,14 +28,14 @@
             "program": "${workspaceFolder}/a.out",
             "args": [
                 "<",
-                "${workspaceFolder}/.vscode/data_in.txt",
+                "${fileDirname}/data_in.txt",
                 ">",
-                "${workspaceFolder}/.vscode/data_out.txt"
+                "${fileDirname}/data_out.txt"
             ],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
-            "externalConsole": false,
+            "externalConsole": true,
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",
