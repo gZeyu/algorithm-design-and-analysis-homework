@@ -45,6 +45,25 @@ void DPKnapsack(Item *itemSet, int maxWeight, int itemNumber, int *valueTable, i
     }
     return;
 }
+void PrintKnapsackItem(Item *itemSet, int *arrowTable, int maxWeight, int i, int w)
+{
+    if (i == 0 || w == 0)
+    {
+        return;
+    }
+
+    if (*(arrowTable + i * (maxWeight + 1) + w) == LEFTTOP)
+    {
+        PrintKnapsackItem(itemSet, arrowTable, maxWeight, i - 1, w - itemSet[i].w);
+        printf("%d ", i);
+    }
+    else
+    {
+        PrintKnapsackItem(itemSet, arrowTable, maxWeight, i - 1, w);
+    }
+
+    return;
+}
 int main(int argc, char *argv[])
 {
     int maxWeight, itemNumber, i;
@@ -68,8 +87,8 @@ int main(int argc, char *argv[])
         scanf("%d %d", &itemSet[i].w, &itemSet[i].v);
     }
 
-    //test DPKnapsack()
     DPKnapsack(itemSet, maxWeight, itemNumber, valueTable, arrowTable);
+    PrintKnapsackItem(itemSet, arrowTable, maxWeight, itemNumber, maxWeight);
 
     return 0;
 }
