@@ -87,6 +87,7 @@ int main(int argc, char *argv[])
         scanf("%d %d", &itemSet[i].w, &itemSet[i].v);
     }
 
+    // test
     DPKnapsack(itemSet, maxWeight, itemNumber, valueTable, arrowTable);
     PrintKnapsackItem(itemSet, arrowTable, maxWeight, itemNumber, maxWeight);
 
